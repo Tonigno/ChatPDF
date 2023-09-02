@@ -137,7 +137,7 @@ def main():
             docs = VectorStore.similarity_search(query=query, k=3)
             # st.write(docs)
 
-            llm = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0.9, model_kwargs = {"temperature": 0.9, "max_tokens": 3000,}, max_tokens=3000)
+            llm = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0.9, model_kwargs = {"temperature": 0.9, "max_tokens": 1500,}, max_tokens=1500)
             chain = load_qa_chain(llm=llm, chain_type="stuff")
             with get_openai_callback() as cb:
                 response = chain.run(input_documents=docs, question=query)
