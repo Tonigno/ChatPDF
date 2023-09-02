@@ -12,3 +12,6 @@ Or set `openai.api_key` to its value:
 ```python
 import openai
 openai.api_key = "sk-..."
+```
+
+Note that this is only a prototype, exception handling has not been implemented, and you may need to properly set the token number for calls to the OpenAI API to avoid exceptions.
